@@ -4,7 +4,20 @@
 
 This project is an end-to-end Machine Learning application for predicting airline passenger satisfaction. Three classification algorithms — K-Nearest Neighbors (KNN), Decision Tree, and Random Forest — are trained and evaluated to compare their performance.
 
-The selected trained machine learning pipeline is deployed as a REST API using FastAPI, allowing users to provide passenger information and receive a satisfaction prediction through an API endpoint.
+The selected trained Machine Learning pipeline is deployed as a REST API using FastAPI and hosted on Render, allowing users to provide passenger information and receive satisfaction predictions through an API endpoint.
+
+## 🚀 Live API
+
+**Live Application:**  
+[https://machine-learning-based-airline-passenger.onrender.com](https://machine-learning-based-airline-passenger.onrender.com)
+
+### Swagger API Documentation
+
+You can interact with and test the API using Swagger UI:
+
+[**Open Swagger Documentation**](https://machine-learning-based-airline-passenger.onrender.com/docs)
+
+---
 
 ## Project Objectives
 
@@ -14,7 +27,8 @@ The selected trained machine learning pipeline is deployed as a REST API using F
 - Select a suitable model for prediction.
 - Save the trained Machine Learning pipeline.
 - Deploy the model using FastAPI.
-- Provide real-time predictions through a REST API.
+- Host the API on Render.
+- Provide real-time passenger satisfaction predictions through a REST API.
 
 ## Machine Learning Models
 
@@ -30,7 +44,7 @@ The dataset contains airline passenger information and satisfaction levels.
 
 ### Target Variable
 
-The target variable is:
+The target variable contains two classes:
 
 - `Neutral or Dissatisfied`
 - `Satisfied`
@@ -71,13 +85,13 @@ The preprocessing pipeline includes:
 - Numerical feature scaling using `StandardScaler`
 - Categorical feature imputation using the most frequent value
 - Categorical feature encoding using `OneHotEncoder`
-- `handle_unknown="ignore"` for categorical features
+- Handling unknown categorical values using `handle_unknown="ignore"`
 
-The preprocessing steps and machine learning model are combined into a single Scikit-learn Pipeline.
+The preprocessing steps and Machine Learning model are combined into a single Scikit-learn Pipeline.
 
 ## Model Evaluation
 
-The models are evaluated using classification metrics such as:
+The models are evaluated using:
 
 - Accuracy
 - Precision
